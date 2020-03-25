@@ -1,0 +1,10 @@
+-r common.in
+
+autopep8
+coverage
+django-extensions
+flake8
+ipython
+model_mommy
+pipdeptree
+pydotplus
