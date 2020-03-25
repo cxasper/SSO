@@ -23,8 +23,8 @@
 
 ## Create application or client details(public key, private key) in the server side in the django shell
 
-- from simple_sso.sso_server.models import Token, Consumer
-- Consumer.objects.create(public_key='your_application_public_key', private_key='your_application_private_key', name='your_application_name')
+- `from simple_sso.sso_server.models import Token, Consumer`
+- `Consumer.objects.create(public_key='your_application_public_key', private_key='your_application_private_key', name='your_application_name')`
 
 ## Run tests and generate html coverage code report
 
