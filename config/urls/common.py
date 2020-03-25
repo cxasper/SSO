@@ -21,8 +21,12 @@ from rest_framework.documentation import include_docs_urls
 
 from apps.core.routers import router
 
+from simple_sso.sso_server.server import Server
+
 API_TITLE = 'Sso'
 API_DESCRIPTION = '...'
+
+test_server = Server ()
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -33,5 +37,6 @@ urlpatterns = [
         r'docs/',
         include_docs_urls(title=API_TITLE, description=API_DESCRIPTION)),
     path(r'api/v1/', include((router.urls, 'api_v1'), namespace='api_v1')),
-    path(r'api/v1/rest-auth/', include('rest_auth.urls'))
+    path(r'api/v1/rest-auth/', include('rest_auth.urls')),
+    path(r'server/', include(test_server.get_urls())),
 ]

@@ -42,6 +42,7 @@ THIRD_PARTY_APPS = (
     'rest_auth',
     'django_filters',
     'corsheaders',
+    'simple_sso.sso_server',
 )
 
 LOCAL_APPS = (
